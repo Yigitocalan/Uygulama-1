@@ -1,8 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
-
-
-*{
+* {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
@@ -10,20 +6,30 @@
     font-weight: 500;
     font-style: italic;
 }
-.container{
+
+body {
+    min-height: 100vh; /* Sayfa yüksekliğini ekran boyutuna göre ayarla */
+    display: flex;
+    flex-direction: column; /* Sayfa içeriğini dikey olarak yerleştir */
+}
+
+.container {
+    flex-grow: 1; /* İçeriğin esnemesini sağlar */
     padding-left: 8%;
     padding-right: 8%;
-    background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)) ,url(./image/bg.png);
-    height: 100vh;
-    width: 100%;
-    background-repeat: round;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./image/bg.png);
+    background-repeat: no-repeat; /* Arka planın tekrar etmesini engeller */
+    background-size: cover; /* Arka planı ekran boyutuna göre kapsar */
+    background-position: center; /* Arka planı ortalar */
 }
-p{
+
+p {
     color: white;
     font-style: normal;
     line-height: 16px;
 }
-.btn{
+
+.btn {
     margin-top: 30px;
     padding: 12px 28px;
     font-size: 12px;
@@ -35,39 +41,45 @@ p{
     border: 2px solid red;
     text-decoration: none;
 }
-.btn:hover{
+
+.btn:hover {
     background-color: black;
     color: white;
     transition: all 0.5s ease-in-out;
 }
-.navbar{
+
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-nav ul li a{
+
+nav ul li a {
     text-decoration: none;
     font-size: 18px;
     color: white;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
 }
-ul{
+
+ul {
     display: flex;
     align-items: center;
     list-style-type: none;
-    column-gap: 20px
+    column-gap: 20px;
 }
-.nav-a:hover{
+
+.nav-a:hover {
     font-size: 20px;
     color: black;
     transition: all 0.5s ease-in-out;
 }
-.left{
-     transform: scale(1) !important;
-    }
 
-.row{
+.left {
+    transform: scale(1) !important;
+}
+
+.row {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -75,11 +87,12 @@ ul{
     height: 88%;
 }
 
-h1{
-    font-size:100px;
+h1 {
+    font-size: 100px;
     color: white;
 }
-.col{
+
+.col {
     flex-basis: 50%;
 }
 
@@ -95,46 +108,100 @@ h1{
     cursor: pointer;
     position: relative;
 }
-.card-head{
-    background-color: rgba(0,0,0,0.7);
+
+.card-head {
+    background-color: rgba(0, 0, 0, 0.7);
     color: white;
     border-radius: 6px;
     padding: 5px;
-    
 }
-.card .card-buttom{
+
+.card .card-buttom {
     position: absolute;
     bottom: 20px;
 }
-.card:hover{
+
+.card:hover {
     transform: translateY(-10px);
     border-color: #fff;
     transition: all 0.5s ease;
 }
-.cards{
+
+.cards {
     max-width: 500px;
     margin: auto;
-
 }
-.card.card1{
+
+.card.card1 {
     background-image: url(./image/pic-1.png);
 }
-.card.card2{
+
+.card.card2 {
     background-image: url(./image/pic-2.png);
 }
-.card.card3{
+
+.card.card3 {
     background-image: url(./image/pic-3.png);
 }
-.card.card4{
+
+.card.card4 {
     background-image: url(./image/pic-4.png);
 }
 
-.footer{
+.footer {
     color: black;
     text-align: center;
+    padding: 20px 0;
 }
 
 /* responsive start */
 
-    
+@media (max-width: 1128px) {
+    .row {
+        display: block;
+    }
 
+    .col h1 {
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .col p {
+        word-break: break-word;
+        overflow-wrap: break-word;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 550px) {
+    ul {
+        display: none;
+    }
+
+    .navbar .left {
+        margin: 0 auto; /* Hem sağa hem de sola otomatik margin verir */
+        max-width: 100%;
+    }
+
+    .card {
+        width: 139px;
+        height: 174px;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 408px) {
+    .card {
+        max-width: 500px;
+        margin: auto;
+        padding-left: 89px;
+    }
+
+    .card-head {
+        display: none;
+    }
+
+    .btn {
+        padding: 4px;
+    }
+}
