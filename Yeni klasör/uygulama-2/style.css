@@ -1,0 +1,321 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    margin: auto;
+    
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Sayfanın en az ekran yüksekliği kadar olmasını sağlar */
+}
+/* header start */
+
+header{
+    max-width:1440px;
+    height: 66px;
+    margin-top:15px ;
+}
+.header-topp{
+    
+    display: flex;
+    justify-content: space-between;
+    
+    align-items: center;
+
+}
+.header-menu nav{
+    display: flex;
+    justify-content: center;
+     align-items: center;    
+     padding: 10px;
+     max-width: 811px;
+}
+
+.header-menu nav ul{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;   
+}
+.header-menu a{
+    text-decoration: none;
+    padding: 10px;
+    color: black;
+    padding-left: 9px;
+    
+}
+
+
+.header-button button{
+    max-width: 231px;
+    max-height:  68px;
+    background-color: white;
+    padding: 10px 25px;
+    border: 1px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* header end */
+
+
+/* main start */
+
+    
+    .container{
+    max-width: 1440px;
+    height: 515px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* İki eşit sütun */
+    gap: 20px;
+}
+.container h2{
+    font-size: 53px;
+    text-align: left;
+}
+.container p{
+    font-size: 17px;
+    line-height: 1;
+    margin-top:10px ;
+    text-align: left;
+}
+.button2 button{
+    background-color:black;
+    border: 1px solid black;
+    margin-top: 10px;
+    padding: 16px 15px;
+    border-radius:10px;
+}
+.container .button2 a{
+    padding: -16px;
+    color: white;
+    margin: 24px;
+    text-decoration: none;
+    font-size: 20px;
+}
+.left-side-img{
+    margin-right: 148px;
+}
+.left-side{
+    margin-left: 205px;
+}
+.bottom-con {
+    display: grid;
+    grid-auto-flow: column; /* Öğeleri yatay (satır) olarak hizala */
+    justify-content: center; /* Yatayda ortala */
+    align-items: center; /* Dikeyde ortala */
+    gap: 63px; /* Logolar arasında boşluk bırak */
+    width: max-content; /* İçeriğe bağlı genişlik */
+    margin: 0 auto; /* Sayfanın ortasına hizalar */
+    padding: 10px;
+}
+.bottom-con img {
+    width: 118px; /* Logoların boyutunu ayarla */
+}
+
+/* main end */
+
+/*section start*/
+.section-hide{
+    max-width: 1440px;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    margin-top: 80px;
+    
+}
+
+.section-hide button{
+    max-width: 1440px;
+
+    display: flex;
+    justify-content: center; /* Yatayda ortalar */
+    align-items: center; /* Dikeyde ortalar */
+    gap: 20px; /* Buton ile metin arasına boşluk ekler */
+    border: none;
+}
+.button3 a {
+    display: inline-block;
+    background-color: green;
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 30px;
+    padding: 10px 32px;
+    margin-right: 40px;
+}
+.section-hide p {
+    margin-right: 458px;
+}
+
+.button3 button{
+    margin-left:206px;
+    background: transparent;
+}
+
+/*section end*/
+
+
+/* card start */
+
+
+.container{
+    flex: 1; /* Sayfanın geri kalanını kaplamasını sağlar */
+    width: 660px;
+    justify-content: center;
+}
+
+
+.container .card{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    border-radius:50px ;
+    width: 600px;
+    background-color: greenyellow;
+    margin-top: 30px;
+    position: relative;
+    height: 310px;
+}
+
+.card-button4{
+    background-color: black;
+    border: 1px solid black;
+    padding: 11px 14px;
+    border-radius:10px;
+    cursor: pointer;
+    color: aliceblue;
+    position: absolute;
+    bottom: 39px;
+
+}
+.card-img{
+    width: 210px;
+    height: 148px;
+}
+/* footer start */
+
+footer.end {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+    margin-top: 50px; /* Footer'ı sayfanın en altına iter */
+}
+
+.middle{
+    width: 660px;
+    justify-content: center;
+}
+
+.card-middle{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    border-radius:50px ;
+    width: 100%;
+    background-color: greenyellow;
+    margin-top: 30px;
+    position: relative;
+    height: 310px;
+}
+
+
+
+footer li a{
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    margin-right: 20px;
+    text-decoration: none;
+}
+footer li {
+    list-style: none;
+}
+.footer-menu ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-social ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .left-side {
+        margin-left: 0;
+        text-align: center;
+    }
+    .bottom-con img {
+        width: 80px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Yatayda ortala */
+        justify-content: center; /* Dikeyde ortala */
+        text-align: center;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* İçeriği ortala */
+        justify-content: center;
+        width: auto; /* Ekran boyutuna uyum sağla */
+    }
+
+    .left-side, .right-side, .header-menu, .bottom-con {
+        margin: 0 auto; /* Ortalamak için */
+        text-align: center;
+    }
+    .header-topp {
+        text-align: center;
+    }
+    .header-menu nav ul {
+        flex-direction: column;
+    }
+    .footer-menu ul, .footer-social ul {
+        flex-direction: column;
+    }
+    .card-middle {
+        width: 90%;
+    }
+    .header-menu{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container h2 {
+        font-size: 36px;
+    }
+    .container p {
+        font-size: 14px;
+    }
+    .button3 a {
+        font-size: 18px;
+    }
+    .bottom-con img {
+        width: 60px;
+    }
+}
+
